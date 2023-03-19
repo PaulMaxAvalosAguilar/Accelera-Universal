@@ -4,6 +4,7 @@ body {
   margin: 0;
   font-family: arial;
   color: rgb(255, 46, 116);
+  background-color: black;
 }
 * {
   box-sizing: border-box;
