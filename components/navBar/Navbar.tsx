@@ -8,7 +8,7 @@ import { TiendaLogo } from './TiendaLogo';
 import { AppLogo } from './AppLogo';
 import { BlogLogo } from './BlogLogo';
 
-export const NavBar: Component = (props) => {
+export const Navbar: Component = (props) => {
   const [menuOpened, setMenuOpened] = createSignal<boolean>(false);
   const [subMenu1Opened, setSubMenu1Opened] = createSignal<boolean>(false);
   const [subMenu2Opened, setSubMenu2Opened] = createSignal<boolean>(false);
