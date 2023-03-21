@@ -1,4 +1,7 @@
 {
+  "imports": {
+    "#root/*": "./*.ts"
+  },
   "scripts": {
     "dev": "vite",
     "prod": "npm run build && npm run server:prod",
@@ -8,6 +11,7 @@
     "preview": "vite build && vite preview"
   },
   "devDependencies": {
+    "@types/node": "^18.15.5",
     "babel-preset-solid": "^1.6.10",
     "cross-env": "^7.0.3",
     "sass": "^1.58.3",

@@ -9,6 +9,9 @@
     "jsx": "preserve",
     "jsxImportSource": "solid-js",
     "skipLibCheck": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "paths": {
+      "#root/*": ["./*"]
+    }
   }
 }

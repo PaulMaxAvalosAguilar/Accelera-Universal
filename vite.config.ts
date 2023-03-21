@@ -9,6 +9,12 @@ const config: UserConfig = {
     // @ts-ignore
     polyfillDynamicImport: false,
   },
+
+  resolve: {
+    alias: {
+      '#root': __dirname,
+    },
+  },
 };
 
 export default config;
