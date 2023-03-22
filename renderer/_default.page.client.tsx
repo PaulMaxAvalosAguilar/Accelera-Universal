@@ -8,6 +8,7 @@ import { render as solidRender, hydrate } from 'solid-js/web';
 import { PageLayout } from './PageLayout';
 import type { PageContextBuiltInClient } from 'vite-plugin-ssr/client/router';
 import type { PageContextCustom } from './types';
+import { getHeapSpaceStatistics } from 'v8';
 
 const clientRouting = true; //To disable set of false & comment export
 let layoutReady = false;
