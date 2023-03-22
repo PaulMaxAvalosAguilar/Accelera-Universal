@@ -16,6 +16,7 @@ nav {
     content: '';
     backdrop-filter: blur(4px);
     z-index: -1;
+    border-radius: 7px;
   }
   .navbar {
     display: flex;
