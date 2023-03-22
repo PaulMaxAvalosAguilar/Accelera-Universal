@@ -1,0 +1,13 @@
+.container {
+  position: relative;
+  .main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: rgb(170, 0, 255);
+    .bottom {
+      position: relative;
+      left: 10;
+    }
+  }
+}

@@ -7,6 +7,8 @@ import { FolderLogo } from './FolderLogo';
 import { TiendaLogo } from './TiendaLogo';
 import { AppLogo } from './AppLogo';
 import { BlogLogo } from './BlogLogo';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 export const Navbar: Component = (props) => {
   const [menuOpened, setMenuOpened] = createSignal<boolean>(false);
@@ -24,11 +26,13 @@ export const Navbar: Component = (props) => {
     }
   }
 
-  function handleSubMenu1Click() {
+  function handleSubMenu1Click(event: any) {
+    event.preventDefault();
     setSubMenu1Opened(!subMenu1Opened());
   }
 
-  function handleSubMenu2Click() {
+  function handleSubMenu2Click(event: any) {
+    event.preventDefault();
     setSubMenu2Opened(!subMenu2Opened());
   }
 

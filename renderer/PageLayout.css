@@ -2,19 +2,14 @@
 
 body {
   margin: 0;
+  padding: 0;
   font-family: arial;
   color: rgb(255, 46, 116);
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
 }
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
-}
-a {
-  text-decoration: none;
-}
-
-.navitem {
-  padding: 3px;
-  color: blue;
 }
