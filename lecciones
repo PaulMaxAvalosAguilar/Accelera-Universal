@@ -1,0 +1,12 @@
+marketing/index.page.tsx:
+
+1.-No usar vw ya que toma toda en cuenta la barra usar en su lugar
+100%
+
+2.- Evitar a toda costa usar position absolute
+3.- Usar un contenedor padre (véase suscribeSection) 
+    con un tamaño width: en px en desktop y 100%  en mobile
+    donde se le de padding o margin que le aplique
+    a todos los hijos para que se vea un formato
+    unficado. Luego que los hijos se alineen a la izquierda
+    o a la derecha
