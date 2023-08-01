@@ -8,9 +8,8 @@ import { render as solidRender, hydrate } from 'solid-js/web';
 import { PageLayout } from './PageLayout';
 import type { PageContextBuiltInClient } from 'vite-plugin-ssr/client/router';
 import type { PageContextCustom } from './types';
-import { getHeapSpaceStatistics } from 'v8';
 
-const clientRouting = true; //To disable set of false & comment export
+const clientRouting = true; //To disable set of false & comment the export above
 let layoutReady = false;
 
 // Central signal to track the current active route.
@@ -18,7 +17,6 @@ const [context, setContext] = createSignal<PageContextCustom | null>(null);
 
 function render(pageContext: PageContextBuiltInClient & PageContextCustom) {
   const container = document.getElementById('page-view');
-
   setContext(pageContext);
 
   // If haven't rendered the layout yet, do so now.

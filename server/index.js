@@ -2,7 +2,11 @@
 
 const express = require('express');
 const compression = require('compression');
-const { renderPage } = require('vite-plugin-ssr');
+const { renderPage } = require('vite-plugin-ssr/server');
+
+require('dotenv').config();
+
+const routes = require('./routes');
 
 const isProduction = process.env.NODE_ENV === 'production';
 const root = `${__dirname}/..`;
@@ -11,6 +15,17 @@ startServer();
 
 async function startServer() {
   const app = express();
+
+  //Authentication
+
+  app.use(express.json());
+  app.use(
+    express.urlencoded({
+      extended: false,
+    })
+  );
+
+  //Authentication
 
   app.use(compression());
 
@@ -43,6 +58,12 @@ async function startServer() {
     res.status(statusCode).type(contentType);
     httpResponse.pipe(res);
   });
+
+  app.route('/signin').get((req, res) => {
+    res.send('hola');
+  });
+
+  app.use(routes);
 
   const port = process.env.PORT || 3000;
   app.listen(port);

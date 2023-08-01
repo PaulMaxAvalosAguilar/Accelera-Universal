@@ -1,0 +1,13 @@
+.button {
+  @apply w-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-md;
+  @apply py-3 text-gray-50 text-lg;
+}
+
+.button:hover {
+  @apply bg-gradient-to-r from-blue-800 to-indigo-800 border-blue-500;
+  @apply text-gray-50;
+}
+
+.button_custom {
+  @apply w-full border py-3 flex justify-center gap-2 hover:bg-gray-400;
+}

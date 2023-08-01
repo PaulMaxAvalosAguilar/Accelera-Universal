@@ -1,30 +1,32 @@
-import {
-  generateHydrationScript,
-  PropAliases,
-  renderToStream,
-} from 'solid-js/web';
-import { PageLayout } from './PageLayout';
+import { generateHydrationScript, renderToStream } from 'solid-js/web';
 import {
   escapeInject,
   dangerouslySkipEscape,
   stampPipe,
-} from 'vite-plugin-ssr';
+} from 'vite-plugin-ssr/server';
+
+import './Main.css';
 import { PageContextCustom } from './types';
 import logoUrl from './logo.svg';
+import { PageLayout } from './PageLayout'; //Initial component
 
 export { render };
 export { passToClient };
 
 // See https://vite-plugin-ssr.com/data-fetching
-const passToClient = ['pageProps', 'documentProps'];
+const passToClient = ['pageProps', 'documentProps', 'routeParams'];
 
 function render(pageContext: PageContextCustom) {
-  //Header
+  //Header definitions for first searched page in the URL---------------------
+  //This definitions are taken from *.page.tsx
+  //Then put into <head> </head> correponding tags
+  //See below at documentHTML
   const { documentProps } = pageContext.exports;
   const title = (documentProps && documentProps.title) || 'Default SSR title';
   const description =
     (documentProps && documentProps.description) || 'Default SSR desc';
   const logo = (documentProps && documentProps.logo) || logoUrl;
+  //Header definitions--------------------------------------------------------
 
   enum RenderMode {
     ssr = 0,

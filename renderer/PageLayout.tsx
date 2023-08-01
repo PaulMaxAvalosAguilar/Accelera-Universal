@@ -1,7 +1,6 @@
 import type { JSX, Component } from 'solid-js';
 import { Props } from './types';
 import { PageContextProvider } from './pageContext';
-import './PageLayout.css';
 
 export { PageLayout };
 
